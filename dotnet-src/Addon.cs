@@ -5,9 +5,9 @@ namespace AddonLibrary;
 [JSExport]
 public static class Addon
 {
-    [JSExport("printTestMessage")]
-    public static int PrintTestMessage() {
-        Console.WriteLine("PrintTestMessage(): Hello World.");
+    [JSExport("bindPort")]
+    public static int BindPort(int port) {
+        Console.WriteLine($"BindPort(): {port}");
         return 4;
     }
 }

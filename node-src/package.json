@@ -1,0 +1,10 @@
+{
+  "name": "node-port-reuse-addon",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "author": "Stiliyan Kushev",
+  "license": "ISC",
+  "files": ["./addon.node"]
+}
