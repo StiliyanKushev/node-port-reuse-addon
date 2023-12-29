@@ -20,13 +20,7 @@ function bindPort(port) {
         throw new Error('port cannot be negative number!');
     }
 
-    const fd = Addon.bindPort(port);
-
-    if(fd == 0) {
-        throw new Error('internal error!');
-    }
-
-    return fd;
+    return Addon.bindPort(port);
 }
 
 module.exports.bindPort = bindPort;

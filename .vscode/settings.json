@@ -1,0 +1,17 @@
+{
+    "cSpell.words": [
+        "addrlen",
+        "hostshort",
+        "htons",
+        "INADDR",
+        "INET",
+        "IPPROTO",
+        "libc",
+        "optlen",
+        "optname",
+        "optval",
+        "REUSEPORT",
+        "setsockopt",
+        "sockaddr"
+    ]
+}

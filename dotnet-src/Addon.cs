@@ -51,16 +51,14 @@ public static class Addon
 
         if (fd < 0)
         {
-            Console.WriteLine("Failed to create socket");
-            return 0;
+            throw new Exception("Failed to create socket");
         }
 
         int optionValue = 1;
         int result = setsockopt(fd, SOL_SOCKET, SO_REUSEPORT, ref optionValue, sizeof(int));
         if (result < 0)
         {
-            Console.WriteLine("Failed to set SO_REUSEPORT");
-            return 0;
+            throw new Exception("Failed to set SO_REUSEPORT");
         }
 
         sockaddr_in addr = new sockaddr_in
@@ -74,11 +72,9 @@ public static class Addon
         result = bind(fd, ref addr, (uint)Marshal.SizeOf(addr));
         if (result < 0)
         {
-            Console.WriteLine("Failed to bind socket");
-            return 0;
+            throw new Exception("Failed to bind socket");
         }
 
-        Console.WriteLine($"Socket file descriptor: {fd}");
         return fd;
     }
 }
